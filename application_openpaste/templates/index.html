@@ -15,6 +15,15 @@
     <!-- *****************************************************************************************************************
      CONTENT - TRESC
      ***************************************************************************************************************** -->
+
+    <div class="container-fluid" ng-show="state_alert==true">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                {% verbatim %}{{ alert }}{% endverbatim %}
+
+            </div>
+        </div>
+    </div>
     {% block start_page %}
     {% endblock start_page %}
 

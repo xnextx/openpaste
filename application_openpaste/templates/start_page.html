@@ -6,8 +6,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="private">Zawartość: </label>
-                        <textarea class="form-control" ng-model="variable" ></textarea><br/>
-                        {% verbatim %}{{ variable }}{% endverbatim %}
+                        <textarea class="form-control" ng-model="inset_content" ></textarea><br/>
                     </div>
                 </div>
 
@@ -19,9 +18,11 @@
                         </div>
                         <div class="col-sm-12 form-inline">
                             <label for="private">Prywatny: </label>
-                            <input type="checkbox" class="form-control" name="private" id="private"/>
+                            <input type="checkbox"  name="private" id="private" ng-model="inset_private"/>
                         </div>
-                        <button type="submit" class="form-control">Wyślij</button>
+                        <div class="col-sm-12">
+                            <button type="submit" class="form-control" ng-click="send_inset(inset_content, inset_private)">Wyślij</button>
+                        </div>
                     </div>
                 </div>
             </form>
