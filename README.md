@@ -6,7 +6,7 @@ Django 1.7.7
 Opcje:
 
 [Paste]
-Zaznaczenie prywatny:
+Zaznaczenie prywatny:<br/>
     -generuje losowy ciąg znaków jako url odnoszący się do wklejki
 
 [en]
