@@ -1,1 +1,2 @@
 # openpaste
+Test
