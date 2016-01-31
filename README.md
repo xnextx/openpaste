@@ -3,8 +3,6 @@ Django 1.7.7
 
 ##[Polish]
 
-Opcje:
-
 ###Opcje główne
 ####/Code-Text/
 
@@ -16,8 +14,3 @@ Opcje:
 
 ##[English]
 
-Options:
-
-###[Paste]<br/>
-Check private:<br/>
-    -generates a random string as url inject
