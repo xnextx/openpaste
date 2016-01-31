@@ -1,5 +1,9 @@
 # Open Paste
-Django 1.7.7
+
+###Requirements:
+* Django 1.7.7+
+* Django Rest Framework 3.3.2+
+
 
 ##[Polish]
 
