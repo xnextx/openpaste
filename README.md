@@ -5,7 +5,7 @@ Django 1.7.7
 
 Opcje:
 
-[Paste]
+[Paste]<br/>
 Zaznaczenie prywatny:<br/>
     -generuje losowy ciąg znaków jako url odnoszący się do wklejki
 
@@ -13,6 +13,6 @@ Zaznaczenie prywatny:<br/>
 
 Options:
 
-[Paste]
-Check private:
+[Paste]<br/>
+Check private:<br/>
     -generates a random string as url inject
