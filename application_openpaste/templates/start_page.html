@@ -1,12 +1,31 @@
 {% extends "index.html" %}
 {% block start_page %}
+    <div class="container-fluid">
+        <div class="row">
+            <form>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="private">Zawartość: </label>
+                        <textarea class="form-control" ng-model="variable" ></textarea><br/>
+                        {% verbatim %}{{ variable }}{% endverbatim %}
+                    </div>
+                </div>
 
-    <textarea ng-model="variable" ></textarea><br/>
 
-    <label for="private">Prywatny: </label>
-    <input name="private" id="private" type="checkbox" /><br />
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label>Opcje:</label>
+                        </div>
+                        <div class="col-sm-12 form-inline">
+                            <label for="private">Prywatny: </label>
+                            <input type="checkbox" class="form-control" name="private" id="private"/>
+                        </div>
+                        <button type="submit" class="form-control">Wyślij</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-    <button type="submit">Wyślij</button>
-
-    {% verbatim %}{{ variable }}{% endverbatim %}
+    </div>
 {% endblock start_page %}
