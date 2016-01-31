@@ -1,11 +1,12 @@
 {% extends "index.html" %}
 {% block start_page %}
 
-    <textarea></textarea><br/>
+    <textarea ng-model="variable" ></textarea><br/>
 
     <label for="private">Prywatny: </label>
     <input name="private" id="private" type="checkbox" /><br />
 
     <button type="submit">Wyślij</button>
 
+    {% verbatim %}{{ variable }}{% endverbatim %}
 {% endblock start_page %}
