@@ -1,18 +1,23 @@
 # Open Paste
 Django 1.7.7
 
-[pl]
+##[Polish]
 
 Opcje:
 
-[Paste]<br/>
-Zaznaczenie prywatny:<br/>
-    -generuje losowy ciąg znaków jako url odnoszący się do wklejki
+###Opcje główne
+####/Code-Text/
 
-[en]
+**"Prywatny"** - Zaznaczenie tej opcji pozwala na "ukrycie" swojej wklejki (Zamiast standardowej nazwy pliku, generowany jest losowy ciąg znaków)
+
+####/Image/
+
+**"Czas"** - Pozwala określić czas po jakim zdjęcie ma zostać skasowane z serwera
+
+##[English]
 
 Options:
 
-[Paste]<br/>
+###[Paste]<br/>
 Check private:<br/>
     -generates a random string as url inject
