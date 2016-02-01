@@ -11,3 +11,8 @@ def all_inset(request):
 
     return render(request, 'all_inset.html', {
     })
+
+def show_one_inset(request):
+
+    return render(request, 'show_one_inset.html', {
+    })
