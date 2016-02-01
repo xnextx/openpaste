@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'application_openpaste.views.start_page', name='HomePage'),
     url(r'^all_inset', 'application_openpaste.views.all_inset', name='All Inset'),
-    url(r'^show_inset/.*', 'application_openpaste.views.show_one_inset', name='All Inset'),
+    url(r'^show_inset/-.*-.*', 'application_openpaste.views.show_one_inset', name='All Inset'),
     url(r'^api/v1/', include(router.urls)),
 
 )

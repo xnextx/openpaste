@@ -6,6 +6,21 @@ import datetime
 import random, string
 from django.contrib.auth.models import User
 
+
+# class Show_One_Inset(APIView):
+#     # permission_classes = (IsAuthenticated,)
+#
+#     def show(self, url):
+#
+#
+#     def get(self, request, *args, **kw):
+#         # Any URL parameters get passed in **kw
+#         myClass = Conecting_procost_base(*args, **kw)
+#         result = myClass.show_all_categories_index()
+#         show_inset = self.show(self, )
+#         response = Response(result, status=status.HTTP_200_OK)
+#         return response
+
 class InsetViewSet(viewsets.ModelViewSet):
     queryset = Inset.objects.all()
     model = Inset
