@@ -28,6 +28,28 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
     End Alert system
 */
 
+
+/*
+    All inset
+*/
+    $scope.show_all_inset = function(){
+        console.log("wysłano");
+
+        var success = function(response){
+            //console.log(response.data);
+            $scope.show_all_inset.insets = response.data;
+
+            //run_alert("Pobrano...", "success", 1500);
+        };
+        var error = function(reason){
+            //run_alert("Nastąpił błąd przy pobieraniu.", "error", 1500)
+        };
+        $http.get("/api/v1/Insets/").then(success, error);
+    };
+/*
+    End All inset
+*/
+
 /*
     Send inset
 */
@@ -46,8 +68,11 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
                 "private": priv
 
             }).then(success, error);
-    }
+    };
+
+
 });
 /*
     End inset
 */
+
