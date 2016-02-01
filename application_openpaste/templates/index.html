@@ -6,6 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/static/bower_components/angular/angular.js"></script>
+        <script src="/static/bower_components/angular-sanitize/angular-sanitize.js"></script>
         <link href="/static/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     </head>
 
@@ -18,7 +19,8 @@
     <div class="container-fluid" ng-show="state_alert==true">
         <div class="row">
             <div class="col-sm-12 text-center">
-                {% verbatim %}{{ alert }}{% endverbatim %}
+                <div ng-bind-html="alert"></div>
+{#                {% verbatim %}{{ alert }}{% endverbatim %}#}
             </div>
         </div>
     </div>
