@@ -12,6 +12,7 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
 /*
     Alert system:
 */
+
     var stop_alert = function (){
         $scope.state_alert = false;
         console.log("dwa");
@@ -24,9 +25,13 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
     };
 
 /*
-    End Alert system:
+    End Alert system
 */
-    $scope.send_inset = function(content, priv) {
+
+/*
+    Send inset
+*/
+    $scope.send_inset = function(content, priv)    {
         console.log("wysłano");
 
         var success = function(response){
@@ -42,6 +47,7 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
 
             }).then(success, error);
     }
-
-
-  });
+});
+/*
+    End inset
+*/

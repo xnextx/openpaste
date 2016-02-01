@@ -6,3 +6,8 @@ def start_page(request):
 
     return render(request, 'start_page.html', {
     })
+
+def all_inset(request):
+
+    return render(request, 'all_inset.html', {
+    })
