@@ -18,11 +18,12 @@
 
 ##[English]
 
-##[Base libraries]
+##[Thanks]
+###[Base libraries]
 * AngularJS
 * Bootstrap
 
-##[Additional libraries]
+###[Additional libraries]
 * Angular Sanitize
 * UI Bootstrap
 * Angular Elastic - https://github.com/monospaced/angular-elastic
