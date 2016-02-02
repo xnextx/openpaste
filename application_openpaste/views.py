@@ -17,9 +17,10 @@ def show_one_inset_tool(request):
         return inset
 
     elif(priv[1] == '0'):#Publiczny
-        inset = ""
+        inset = []
         for x in Inset.objects.filter(id=url[15:]):
-           inset += u'''Autor: %s <br/> <textarea style="color:black">Treść: %s </textarea><br/>''' % (x.owner, x.content)
+            inset.append(x.owner);
+            inset.append(x.content);
         return inset
 
     else:
@@ -41,5 +42,6 @@ def all_inset(request):
 def show_one_inset(request):
 
     return render(request, 'show_one_inset.html', {
-        'show_inset' : show_one_inset_tool(request),
+        'owner' : show_one_inset_tool(request)[0],
+        'content' : show_one_inset_tool(request)[1],
     })
