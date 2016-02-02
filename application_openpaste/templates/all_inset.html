@@ -5,8 +5,8 @@
 
                 <div class="col-sm-12 red_box" ng-init="show_all_inset()">
                     <ul>
-                        <div ng-repeat="inset in show_all_inset.insets">
-                            <li><a href="/show_inset/-0-{% verbatim %}{{ inset.id }}{% endverbatim %}"> #{% verbatim %}{{ inset.id }}{% endverbatim %}</a></li>
+                        <div ng-repeat="inset in show_all_inset.insets | orderBy: '-id'">
+                            <li><a href="/show_inset/-0-{% verbatim %}{{ inset.id }}{% endverbatim %}"> #{% verbatim %}{{ inset.id }} - {{ inset.date_added | date:'HH:mm:ss yyyy-MM-dd'}} - {{ inset.author }}{% endverbatim %}</a></li>
                             <br />
                         </div>
                     </ul>

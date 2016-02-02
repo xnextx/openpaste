@@ -1,0 +1,37 @@
+body {
+    background: rgb(236, 234, 232);
+    margin: 0;
+    height: 100%;
+
+}
+
+.red_box {
+    /*#283339*/
+    /*#FAF9F8*/
+    background: rgb(212, 56, 60);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+
+}
+
+.red_box a{
+    color: white;
+}
+.navbar{
+    background-color: transparent;
+
+}
+
+
+.navbar-default .navbar-nav > li > a{
+    background-color: rgb(212, 56, 60);
+    color: #ffffff;
+
+}
+.navbar-default .navbar-nav > li > a:hover{
+    background-color: rgba(212, 56, 60, 0.89);
+    color: #ffffff;
+
+}
+
