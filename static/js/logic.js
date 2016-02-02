@@ -1,11 +1,11 @@
 
-var Application = angular.module('Application', ['ngSanitize', 'ui.bootstrap']).config(function($httpProvider) {
+var Application = angular.module('Application', ['ngSanitize', 'ui.bootstrap', 'monospaced.elastic']).config(function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 });
 
 
-Application.controller('Paste_system', function ($scope, $http, $timeout) {
+Application.controller('Paste_system', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
 
     $scope.state_alert = false;
 
@@ -75,9 +75,10 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
     };
 
 
-});
-
 $scope.state_alert = false;
+$scope.inset_content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id turpis eget metus lobortis finibus. Nullam lectus ante, bibendum vitae dolor quis, tincidunt faucibus metus. Aenean vehicula aliquet sem. Nulla sem lectus, aliquet at lacus non, tristique ornare sem. Proin convallis aliquet urna sed varius. Morbi ornare risus arcu, sit amet congue eros blandit a. Aenean pellentesque id dolor eget rhoncus. Morbi vestibulum eros non nunc vulputate venenatis. Praesent ipsum eros, posuere sed porttitor sit amet, fermentum elementum purus. Sed odio ex, ultricies eget rutrum in, lacinia eu turpis";
+}]);
+
 /*
     End inset
 */

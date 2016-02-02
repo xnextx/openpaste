@@ -10,10 +10,39 @@
         <link href="/static/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
         <link href="/static/css/main.css" rel="stylesheet">
         <script src="/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="/static/bower_components/angular-elastic/elastic.js"></script>
+
     </head>
 
     <body ng-controller="Paste_system">
 
+    <nav class="navbar navbar-default" style="background-color: transparent;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" href="/" style="background-color: rgb(212, 56, 60); color:white;">
+                    OpenPaste
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="/">New paste</a></li>
+                    <li><a href="/all_inset">Show all</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left green">
+                    {% block navbar_place %}
+                    {% endblock %}
+                </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- *****************************************************************************************************************
      CONTENT - TRESC
      ***************************************************************************************************************** -->
@@ -21,20 +50,11 @@
     <div class="container-fluid" ng-show="state_alert==true">
         <div class="row">
             <div class="col-sm-12 text-center">
-
-
-
                 <div ng-bind-html="alert"></div>
 {#                {% verbatim %}{{ alert }}{% endverbatim %}#}
             </div>
         </div>
     </div>
-
-    Menu:
-    <a href="/">Dodaj wklejke</a>
-    ||
-    <a href="/all_inset">Wszystkie wklejki</a>
-
     {% block start_page %}
     {% endblock start_page %}
 

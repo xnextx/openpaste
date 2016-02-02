@@ -2,13 +2,10 @@
 {% block start_page %}
     <div class="container-fluid">
         <div class="row red_box">
-            <div class="col-sm-12" style="padding-bottom:30px">
-                <button type="submit" class="form-control" ng-click="send_inset(inset_content, inset_private)">Wyślij</button>
-            </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="private">Zawartość: </label>
-                    <textarea class="form-control" ng-model="inset_content" ></textarea><br/>
+                    <textarea class="form-control" ng-model="inset_content" msd-elastic ></textarea><br/>
                 </div>
             </div>
 
@@ -29,3 +26,7 @@
 
     </div>
 {% endblock start_page %}
+
+{% block navbar_place %}
+    <li><a style="background-color: rgb(212, 56, 60);" href="" ng-click="send_inset(inset_content, inset_private)">Send paste</a></li>
+{% endblock %}
