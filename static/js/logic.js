@@ -13,6 +13,7 @@ Application.controller('Paste_system', function ($scope, $http, $timeout) {
     Alert system:
 */
 
+
     var stop_alert = function (){
         $scope.state_alert = false;
         console.log("dwa");
