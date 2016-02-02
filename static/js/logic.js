@@ -1,5 +1,5 @@
 
-var Application = angular.module('Application', ['ngSanitize']).config(function($httpProvider) {
+var Application = angular.module('Application', ['ngSanitize', 'ui.bootstrap']).config(function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
 });

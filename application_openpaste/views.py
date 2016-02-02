@@ -1,3 +1,4 @@
+#-*-coding:utf-8-*-
 from django.shortcuts import render
 from application_openpaste.models import *
 import re
@@ -18,7 +19,7 @@ def show_one_inset_tool(request):
     elif(priv[1] == '0'):#Publiczny
         inset = ""
         for x in Inset.objects.filter(id=url[15:]):
-           inset += x.content + ", "
+           inset += u'''Autor: %s <br/> <textarea style="color:black">Treść: %s </textarea><br/>''' % (x.owner, x.content)
         return inset
 
     else:

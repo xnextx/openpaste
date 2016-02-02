@@ -1,31 +1,30 @@
 {% extends "index.html" %}
 {% block start_page %}
     <div class="container-fluid">
-        <div class="row">
-            <form>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="private">Zawartość: </label>
-                        <textarea class="form-control" ng-model="inset_content" ></textarea><br/>
-                    </div>
+        <div class="row red_box">
+            <div class="col-sm-12" style="padding-bottom:30px">
+                <button type="submit" class="form-control" ng-click="send_inset(inset_content, inset_private)">Wyślij</button>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="private">Zawartość: </label>
+                    <textarea class="form-control" ng-model="inset_content" ></textarea><br/>
                 </div>
+            </div>
 
 
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <label>Opcje:</label>
-                        </div>
-                        <div class="col-sm-12 form-inline">
-                            <label for="private">Prywatny: </label>
-                            <input type="checkbox"  name="private" id="private" ng-model="inset_private"/>
-                        </div>
-                        <div class="col-sm-12">
-                            <button type="submit" class="form-control" ng-click="send_inset(inset_content, inset_private)">Wyślij</button>
-                        </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Opcje:</label>
                     </div>
+                    <div class="col-sm-12 form-inline">
+                        <label for="private">Prywatny: </label>
+                        <input type="checkbox"  name="private" id="private" ng-model="inset_private"/>
+                    </div>
+
                 </div>
-            </form>
+            </div>
         </div>
 
     </div>
