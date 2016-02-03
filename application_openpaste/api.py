@@ -54,6 +54,6 @@ class InsetViewSet(viewsets.ModelViewSet):
 
 
     # Developer mode :D
-    # def get_queryset(self):
-    #     queryset = Inset.objects.filter(private=False)
-    #     return queryset
+    def get_queryset(self):
+        queryset = Inset.objects.filter(private=False)
+        return queryset
