@@ -16,7 +16,7 @@ body {
 }
 
 .red_box a{
-    color: white;
+    color: black;
 }
 .navbar{
     background-color: transparent;
@@ -26,12 +26,12 @@ body {
 
 .navbar-default .navbar-nav > li > a{
     background-color: rgb(212, 56, 60);
-    color: #ffffff;
+    color: #FAF9F8;
 
 }
 .navbar-default .navbar-nav > li > a:hover{
     background-color: rgba(212, 56, 60, 0.89);
-    color: #ffffff;
+    color: #FAF9F8;
 
 }
 

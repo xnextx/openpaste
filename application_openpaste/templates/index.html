@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl" ng-app="Application">
     <head>
@@ -11,7 +10,7 @@
         <link href="/static/css/main.css" rel="stylesheet">
         <script src="/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="/static/bower_components/angular-elastic/elastic.js"></script>
-
+        <script src="/static/bower_components/angular-clipboard/angular-clipboard.js"></script>
     </head>
 
     <body ng-controller="Paste_system">
@@ -47,11 +46,11 @@
      CONTENT - TRESC
      ***************************************************************************************************************** -->
 
-    <div class="container-fluid" ng-show="state_alert==true">
+    <div class="container-fluid red_box" ng-show="alerts != '' ">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <div ng-bind-html="alert"></div>
-{#                {% verbatim %}{{ alert }}{% endverbatim %}#}
+                    <uib-alert ng-repeat="alert in alerts" type="{% verbatim %}{{alert.type}}{% endverbatim %}" close="closeAlert($index)"><span ng-bind-html="alert.msg"></span> <button class="btn button btn-sm" clipboard text="url_to_copy">copy the url</button></uib-alert>
+
             </div>
         </div>
     </div>

@@ -26,6 +26,7 @@
 * Bootstrap
 
 ###[Additional libraries]
+* Angular clipboard - https://github.com/omichelsen/angular-clipboard.git
 * Angular Sanitize
 * UI Bootstrap
 * Angular Elastic - https://github.com/monospaced/angular-elastic
