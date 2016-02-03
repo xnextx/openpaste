@@ -33,9 +33,9 @@ def initial_menu(request):
 
     })
 
-def start_page(request):
+def send_text_paste(request):
 
-    return render(request, 'start_page.html', {
+    return render(request, 'send_text_paste.html', {
 
     })
 
