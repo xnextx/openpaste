@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block start_page %}
+    <div class="container-fluid">
+        <div class="row red_box">
+            <div class="col-sm-10">
+                <div class="form-group">
+                    <label for="private">Content: </label>
+                    <input type="file" />
+                </div>
+            </div>
+
+            <div class="col-sm-2 text-center">
+                <div class="form-group">
+                    <div class="col-sm-12 form-inline">
+                        <label for="private">Private: </label>
+                        <input type="checkbox"  name="private" id="private" ng-model="inset_private"/>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock start_page %}
+
+{% block navbar_place_right %}
+{#    <li><a href="/text-inset/">New paste</a></li>#}
+    <li><a href="/all_inset">Show all</a></li>
+{% endblock %}
+
+{% block navbar_place_left %}
+    <li><a style="background-color: #283339; color:#FAF9F8;" href="" ng-click="send_inset(inset_content, inset_private)">Send paste <span class="glyphicon glyphicon-send" aria-hidden="true"></span></a></li>
+    <li><a style="background-color: #283339; color:#FAF9F8;" href="" ng-click="send_inset(inset_content, inset_private)"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Click to send paste!</a></li>
+{% endblock %}

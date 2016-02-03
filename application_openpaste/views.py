@@ -33,6 +33,12 @@ def initial_menu(request):
 
     })
 
+def send_image_inset(request):
+
+    return render(request, 'send_image_inset.html', {
+
+    })
+
 def send_text_paste(request):
 
     return render(request, 'send_text_paste.html', {
