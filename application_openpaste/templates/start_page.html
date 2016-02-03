@@ -24,7 +24,12 @@
     </div>
 {% endblock start_page %}
 
-{% block navbar_place %}
+{% block navbar_place_right %}
+{#    <li><a href="/text-inset/">New paste</a></li>#}
+    <li><a href="/all_inset">Show all</a></li>
+{% endblock %}
+
+{% block navbar_place_left %}
     <li><a style="background-color: #283339; color:#FAF9F8;" href="" ng-click="send_inset(inset_content, inset_private)">Send paste <span class="glyphicon glyphicon-send" aria-hidden="true"></span></a></li>
     <li><a style="background-color: #283339; color:#FAF9F8;" href="" ng-click="send_inset(inset_content, inset_private)"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Click to send paste!</a></li>
 {% endblock %}

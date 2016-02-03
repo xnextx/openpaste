@@ -47,17 +47,18 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
 */
     $scope.show_all_inset = function(){
         console.log("wysłano");
-
+        console.log($scope.bigCurrentPage);
         var success = function(response){
             //console.log(response.data);
-            $scope.show_all_inset.insets = response.data;
+            $scope.show_all_inset.insets = response.data.results;
+            $scope.bigTotalItems = response.data.count;
 
             //run_alert("Pobrano...", "success", 1500);
         };
         var error = function(reason){
             //run_alert("Nastąpił błąd przy pobieraniu.", "error", 1500)
         };
-        $http.get("/api/v1/Insets/").then(success, error);
+        $http.get("/api/v1/Insets/?page=" + $scope.bigCurrentPage).then(success, error);
     };
 /*
     End All inset
@@ -87,6 +88,7 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
 
 
 //$scope.state_alert = false;
+$scope.bigCurrentPage = 1;
 $scope.inset_content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id turpis eget metus lobortis finibus. Nullam lectus ante, bibendum vitae dolor quis, tincidunt faucibus metus. Aenean vehicula aliquet sem. Nulla sem lectus, aliquet at lacus non, tristique ornare sem. Proin convallis aliquet urna sed varius. Morbi ornare risus arcu, sit amet congue eros blandit a. Aenean pellentesque id dolor eget rhoncus. Morbi vestibulum eros non nunc vulputate venenatis. Praesent ipsum eros, posuere sed porttitor sit amet, fermentum elementum purus. Sed odio ex, ultricies eget rutrum in, lacinia eu turpis";
 }]);
 

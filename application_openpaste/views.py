@@ -27,6 +27,12 @@ def show_one_inset_tool(request):
         return False
 # End Tools
 
+def initial_menu(request):
+
+    return render(request, 'initial_menu.html', {
+
+    })
+
 def start_page(request):
 
     return render(request, 'start_page.html', {

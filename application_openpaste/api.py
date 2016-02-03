@@ -21,6 +21,9 @@ from django.contrib.auth.models import User
 #         response = Response(result, status=status.HTTP_200_OK)
 #         return response
 
+
+
+
 class InsetViewSet(viewsets.ModelViewSet):
     queryset = Inset.objects.all()
     model = Inset

@@ -2,7 +2,9 @@
 {% block all_inset %}
     <div class="container-fluid">
         <div class="row">
-
+                <div class="col-sm-12 text-center" style="margin-top:-40px;margin-bottom:-25px;">
+                    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" ng-click="show_all_inset()" class="pagination-sm" boundary-link-numbers="true" rotate="false"></uib-pagination>
+                </div>
                 <div class="col-sm-12 red_box" ng-init="show_all_inset()">
                     <ul>
                         <div ng-repeat="inset in show_all_inset.insets | orderBy: '-id'">
@@ -17,3 +19,11 @@
 
     </div>
 {% endblock all_inset %}
+
+{% block navbar_place_left %}
+
+{% endblock %}
+{% block navbar_place_right %}
+<li><a href="/text-inset/">New paste</a></li>
+{#    <li><a href="/all_inset">Show all</a></li>#}
+{% endblock %}

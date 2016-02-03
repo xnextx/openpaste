@@ -24,18 +24,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                <a class="navbar-brand" href="/" style="background-color: rgb(212, 56, 60); color:white;">
-                    OpenPaste
+                <a class="navbar-brand" href="/" style="background-color: rgb(212, 56, 60); color:white; padding-top:10px;">
+                    OpenPaste<br/>
+                    <div style="margin-top:-4px; font-size:11px">Return to start page</div>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-
-                    <li><a href="/">New paste</a></li>
-                    <li><a href="/all_inset">Show all</a></li>
+                    {% block navbar_place_right %}
+                    {% endblock %}
                 </ul>
                 <ul class="nav navbar-nav navbar-left green">
-                    {% block navbar_place %}
+                    {% block navbar_place_left %}
                     {% endblock %}
                 </ul>
                 </div>
