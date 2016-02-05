@@ -69,10 +69,11 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
 */
     $scope.send_inset = function(content, priv)    {
         var success = function(response){
+            var absolute_url = $location.absUrl().slice(0, $location.absUrl().length-11);
             if(response.data.private == true){
-                $scope.addAlert("<strong>You sent</strong>, URL is: <a href='"+$location.absUrl().slice(0, $location.absUrl().length-11)+"show_inset/-1-" + response.data.url_private + "'>"+$location.absUrl()+"show_inset/-0-"+response.data.url_private+"</a>", "success", 5000, $location.absUrl().slice(0, $location.absUrl().length-11)+"show_inset/-1-"+response.data.url_private);
+                $scope.addAlert("<strong>You sent</strong>, URL is: <a href='"+absolute_url+"show_inset/-1-" + response.data.url_private + "'>"+absolute_url+"show_inset/-0-"+response.data.url_private+"</a>", "success", 5000, absolute_url+"show_inset/-1-"+response.data.url_private);
             }else{
-                $scope.addAlert("<strong>You sent</strong>, URL is: <a href='"+$location.absUrl().slice(0, $location.absUrl().length-11)+"show_inset/-0-" + response.data.id + "'>"+$location.absUrl()+"show_inset/-0-"+response.data.id+"</a>", "success", 5000, $location.absUrl().slice(0, $location.absUrl().length-11)+"show_inset/-0-"+response.data.id);
+                $scope.addAlert("<strong>You sent</strong>, URL is: <a href='"+absolute_url+"show_inset/-0-" + response.data.id + "'>"+absolute_url+"show_inset/-0-"+response.data.id+"</a>", "success", 5000, absolute_url+"show_inset/-0-"+response.data.id);
             }
         };
         var error = function(response){
@@ -88,7 +89,6 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
 
 
 //$scope.state_alert = false;
-console.log($location.absUrl().slice(0, $location.absUrl().length-12));
 $scope.bigCurrentPage = 1;
 $scope.inset_content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id turpis eget metus lobortis finibus. Nullam lectus ante, bibendum vitae dolor quis, tincidunt faucibus metus. Aenean vehicula aliquet sem. Nulla sem lectus, aliquet at lacus non, tristique ornare sem. Proin convallis aliquet urna sed varius. Morbi ornare risus arcu, sit amet congue eros blandit a. Aenean pellentesque id dolor eget rhoncus. Morbi vestibulum eros non nunc vulputate venenatis. Praesent ipsum eros, posuere sed porttitor sit amet, fermentum elementum purus. Sed odio ex, ultricies eget rutrum in, lacinia eu turpis";
 }]);
