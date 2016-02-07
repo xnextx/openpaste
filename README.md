@@ -3,7 +3,7 @@
 ###Requirements:
 * Django 1.8+
 * Django Rest Framework 3.3.2+
-
+* django-filter
 
 ##[Polish]
 
