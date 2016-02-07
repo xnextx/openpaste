@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 #Inset-Wklejka
 class Inset(models.Model):
     owner = models.ForeignKey(User, null=True, blank=True, default=None)
-    content = models.CharField(verbose_name="Content", max_length=1000)
+    content = models.TextField(verbose_name="Content", max_length=10000000)
     private = models.BooleanField(verbose_name="Private", default=False, blank=True)
     url_private = models.CharField(verbose_name="URL name", blank=True, max_length=10000)
     date_added = models.DateTimeField(verbose_name="Date added", blank=True)

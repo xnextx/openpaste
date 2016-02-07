@@ -40,8 +40,12 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
 /*
     End Alert system
 */
-
-
+/*
+    Show one text inset
+*/
+    $scope.get_content = function(){
+        $scope.m = m;
+    };
 /*
     All inset
 */

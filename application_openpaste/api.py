@@ -2,6 +2,7 @@ from rest_framework import viewsets, permissions, filters
 from application_openpaste.models import *
 from .serializers import InsetSerializer
 from rest_framework.permissions import DjangoModelPermissions, IsAuthenticated
+
 import datetime
 import random, string
 from django.contrib.auth.models import User
@@ -28,6 +29,7 @@ class InsetViewSet(viewsets.ModelViewSet):
     queryset = Inset.objects.all()
     model = Inset
     serializer_class = InsetSerializer
+    # filter_backends = (filters.DjangoFilterBackend, )
     # permission_classes = (DjangoModelPermissions, )
 
 

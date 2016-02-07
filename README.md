@@ -29,5 +29,6 @@
 * Angular clipboard - https://github.com/omichelsen/angular-clipboard.git
 * Angular Sanitize
 * UI Bootstrap
+* Highlight.JS
 * Angular Elastic - https://github.com/monospaced/angular-elastic
 * Jquery
