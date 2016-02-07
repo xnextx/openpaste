@@ -1,7 +1,7 @@
 # Open Paste
 
 ###Requirements:
-* Django 1.7.7+
+* Django 1.8+
 * Django Rest Framework 3.3.2+
 
 

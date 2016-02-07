@@ -62,7 +62,7 @@ Application.controller('Paste_system', ['$scope', '$http', '$timeout', '$locatio
         var error = function(reason){
             //run_alert("Nastąpił błąd przy pobieraniu.", "error", 1500)
         };
-        $http.get("/api/v1/Insets/?page=" + $scope.bigCurrentPage).then(success, error);
+        $http.get("/api/v1/Insets/?page=" + $scope.bigCurrentPage +"&ordering=-id").then(success, error);
     };
 /*
     End All inset
