@@ -10,7 +10,7 @@ from rest_framework import generics
 import datetime
 import random, string
 from django.contrib.auth.models import User
-
+from rest_framework.decorators import api_view
 
 # class Show_One_Inset(APIView):
 #     # permission_classes = (IsAuthenticated,)
@@ -28,13 +28,13 @@ from django.contrib.auth.models import User
 
 
 
-
 class InsetViewSet(viewsets.ModelViewSet):
     queryset = Inset.objects.all()
     model = Inset
     serializer_class = InsetSerializer
     filter_backends = (filters.OrderingFilter,)
     ordering_fields = ('id', )
+    http_method_names = ['get', 'post', 'head']
     # permission_classes = (DjangoModelPermissions, )
 
 

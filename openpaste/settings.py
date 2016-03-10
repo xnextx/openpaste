@@ -82,7 +82,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False # TODO: To trzeba zmienic jak kod bedzie juz oficjalnie puszczony. Pozwala ominac warningi o strefie czasowej w testach
+
 
 
 # Static files (CSS, JavaScript, Images)
